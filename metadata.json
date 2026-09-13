@@ -1,0 +1,6 @@
+{
+  "name": "Gráfica Vinigor",
+  "description": "Soluções gráficas modernas no Rio de Janeiro: Impressão Digital, Offset, Papelaria Corporativa, Comunicação Visual e orçamentos rápidos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
