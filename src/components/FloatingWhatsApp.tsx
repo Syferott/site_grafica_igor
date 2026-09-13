@@ -30,7 +30,7 @@ export const FloatingWhatsApp: React.FC = () => {
               <div className="relative">
                 <div className="w-10 h-10 rounded-full bg-white p-1 flex items-center justify-center overflow-hidden">
                   <img
-                    src="/images/logo_vinigor.png"
+                    src="./images/logo_vinigor.png"
                     alt="Gráfica Vinigor"
                     className="w-full h-auto object-contain"
                   />

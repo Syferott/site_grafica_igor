@@ -92,7 +92,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
           <a href="#inicio" className="flex items-center gap-3 shrink-0 group">
             <div className="relative flex items-center transition-all">
               <img 
-                src="/images/logo2.png" 
+                src="./images/logo2.png" 
                 alt="Gráfica Vinigor - Imprimindo boas ideias" 
                 className="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]"
                 onError={(e) => {

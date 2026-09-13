@@ -123,7 +123,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenQuote }) => {
               <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 flex items-center justify-between gap-4">
                 <div className="bg-white/95 px-3 py-1.5 rounded-lg shadow-xs">
                   <img
-                    src="/images/logo_vinigor.png"
+                    src="./images/logo_vinigor.png"
                     alt="Gráfica Vinigor"
                     className="h-9 w-auto object-contain"
                     onError={(e) => {

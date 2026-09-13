@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
                 className="h-10 sm:h-11 w-auto object-contain"
                 referrerPolicy="no-referrer"
                 onError={(e) => {
-                  e.currentTarget.src = '/images/logo_vinigor.png';
+                  e.currentTarget.src = './images/logo_vinigor.png';
                 }}
               />
               <span className="font-extrabold text-xl text-white tracking-tight">
@@ -85,7 +85,7 @@ export const Footer: React.FC = () => {
             {/* Site Seguro badge */}
             <div className="space-y-2">
               <img
-                src="/images/site-seguro.png"
+                src="./images/site-seguro.png"
                 alt="Site Seguro SSL"
                 className="h-10 w-auto object-contain brightness-95"
                 onError={(e) => {
