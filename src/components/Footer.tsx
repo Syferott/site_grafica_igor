@@ -17,19 +17,15 @@ export const Footer: React.FC = () => {
           
           {/* Col 1: Brand & Slogan */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center">
               <img
-                src="https://graficavinigor.com.br/wp-content/uploads/2024/11/logo_vinigor-300x107.png"
-                alt="Gráfica Vinigor"
-                className="h-10 sm:h-11 w-auto object-contain"
-                referrerPolicy="no-referrer"
+                src="./images/logo_vinigor.png"
+                alt="Gráfica Vinigor - Imprimindo boas ideias"
+                className="h-14 sm:h-16 md:h-20 w-auto max-w-[280px] object-contain"
                 onError={(e) => {
-                  e.currentTarget.src = './images/logo_vinigor.png';
+                  e.currentTarget.src = 'https://graficavinigor.com.br/wp-content/uploads/2024/11/logo_vinigor-300x107.png';
                 }}
               />
-              <span className="font-extrabold text-xl text-white tracking-tight">
-                GRÁFICA VINIGOR
-              </span>
             </div>
             
             <p className="text-slate-400 text-xs leading-relaxed max-w-sm">

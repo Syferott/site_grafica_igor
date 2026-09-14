@@ -10,11 +10,9 @@ import { ServiceCategories } from './components/ServiceCategories';
 import { MedicalCorporateSection } from './components/MedicalCorporateSection';
 import { QuoteAssistant } from './components/QuoteAssistant';
 import { PortfolioShowcase } from './components/PortfolioShowcase';
-import { HowItWorks } from './components/HowItWorks';
 import { AboutSection } from './components/AboutSection';
 import { Testimonials } from './components/Testimonials';
 import { FaqSection } from './components/FaqSection';
-import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { scrollToSection } from './utils/scroll';
@@ -38,7 +36,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0f141c] text-slate-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-slate-950 overflow-x-hidden w-full max-w-full">
+    <div className="min-h-screen bg-[#0f141c] text-slate-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-slate-950 w-full max-w-full">
       {/* Navigation */}
       <Header onOpenQuoteModal={handleOpenQuote} />
 
@@ -67,9 +65,6 @@ export default function App() {
         {/* Visual Showcase / Portfolio of Printed Materials */}
         <PortfolioShowcase />
 
-        {/* How It Works (Step 1 to 4) */}
-        <HowItWorks />
-
         {/* About Gráfica Vinigor (Company Story since 90s, Values, Mission) */}
         <AboutSection onOpenQuote={handleOpenQuote} />
 
@@ -78,9 +73,6 @@ export default function App() {
 
         {/* Technical FAQ */}
         <FaqSection />
-
-        {/* Contact Section (Penha address, email, phone, WhatsApp) */}
-        <ContactSection />
       </main>
 
       {/* Official Footer with CNPJ, site seguro badge & credits */}

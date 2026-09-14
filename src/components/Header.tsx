@@ -18,7 +18,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
     { label: 'Quem Somos', href: '#quem-somos' },
     { label: 'Depoimentos', href: '#depoimentos' },
     { label: 'Dúvidas', href: '#duvidas' },
-    { label: 'Contato', href: '#contato' },
   ];
 
   const handleNavClick = (href: string) => {
@@ -82,10 +81,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
         </div>
       </div>
 
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 text-slate-900 shadow-xs w-full max-w-full overflow-x-hidden">
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 text-slate-900 shadow-sm w-full">
         {/* Main Navbar */}
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20 gap-2 sm:gap-4">
+        <div className="flex items-center justify-between h-16 sm:h-20 gap-3 sm:gap-4">
           {/* Logo with high-contrast badge */}
           <a 
             href="#inicio" 
@@ -93,13 +92,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               e.preventDefault();
               handleNavClick('#inicio');
             }}
-            className="flex items-center gap-2 sm:gap-3 shrink min-w-0 group cursor-pointer"
+            className="flex items-center shrink-0 group cursor-pointer"
           >
-            <div className="relative flex items-center transition-all min-w-0">
+            <div className="relative flex items-center shrink-0">
               <img 
                 src="./images/logo2.png" 
                 alt="Gráfica Vinigor - Imprimindo boas ideias" 
-                className="h-8 sm:h-10 md:h-12 max-w-[140px] xs:max-w-[170px] sm:max-w-none w-auto object-contain transition-transform group-hover:scale-[1.02]"
+                className="h-8 sm:h-9 md:h-11 w-auto object-contain shrink-0 transition-transform group-hover:scale-[1.02]"
                 onError={(e) => {
                   // fallback to text if image fails
                   const target = e.currentTarget;
@@ -109,7 +108,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
                 }}
               />
               {/* Fallback branded text */}
-              <div style={{ display: 'none' }} className="flex-col">
+              <div style={{ display: 'none' }} className="flex-col shrink-0">
                 <span className="font-extrabold text-base sm:text-2xl text-slate-900 tracking-tight flex items-center gap-1">
                   GRÁFICA <span className="text-emerald-600">VINIGOR</span>
                   <span className="inline-block w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-pink-500"></span>
@@ -122,12 +121,12 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-1 text-sm font-semibold text-slate-700">
+          <nav className="hidden xl:flex items-center gap-0.5 2xl:gap-1 text-xs 2xl:text-sm font-semibold text-slate-700 shrink-0">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className="px-3 py-2 rounded-lg hover:text-emerald-600 hover:bg-slate-100 transition-colors cursor-pointer text-left"
+                className="px-2 2xl:px-3 py-1.5 2xl:py-2 rounded-lg hover:text-emerald-600 hover:bg-slate-100 transition-colors cursor-pointer text-left whitespace-nowrap"
               >
                 {link.label}
               </button>
@@ -135,10 +134,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
           </nav>
 
           {/* Action CTAs */}
-          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <button
               onClick={() => onOpenQuoteModal ? onOpenQuoteModal() : handleNavClick('#orcamento')}
-              className="hidden sm:inline-flex items-center justify-center px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-lg transition-colors cursor-pointer"
+              className="hidden sm:inline-flex items-center justify-center px-3.5 2xl:px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-lg transition-colors cursor-pointer whitespace-nowrap"
             >
               Simular Pedido
             </button>
@@ -147,7 +146,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               href={COMPANY_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-2 sm:py-2.5 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-xs sm:text-sm rounded-lg shadow-sm hover:shadow-emerald-600/25 transition-all group cursor-pointer"
+              className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-xs sm:text-sm rounded-lg shadow-sm hover:shadow-emerald-600/25 transition-all group cursor-pointer whitespace-nowrap"
             >
               <MessageCircle className="w-4 h-4 text-white stroke-[2.2] shrink-0" />
               <span className="text-white hidden sm:inline">Chamar no WhatsApp</span>
@@ -157,7 +156,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="xl:hidden p-1.5 sm:p-2 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-100 focus:outline-hidden"
+              className="xl:hidden p-1.5 sm:p-2 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-100 focus:outline-hidden cursor-pointer"
               aria-label="Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
