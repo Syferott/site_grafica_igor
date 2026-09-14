@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, MessageCircle, Menu, X } from 'lucide-react';
 import { COMPANY_INFO } from '../data/siteData';
+import { scrollToSection } from '../utils/scroll';
 
 interface HeaderProps {
   onOpenQuoteModal?: (presetCategory?: string) => void;
@@ -22,10 +23,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
 
   const handleNavClick = (href: string) => {
     setMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    scrollToSection(href, 75, 700);
   };
 
   return (
@@ -84,17 +82,24 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
         </div>
       </div>
 
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 text-slate-900 shadow-xs">
+      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 text-slate-900 shadow-xs w-full max-w-full overflow-x-hidden">
         {/* Main Navbar */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 gap-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20 gap-2 sm:gap-4">
           {/* Logo with high-contrast badge */}
-          <a href="#inicio" className="flex items-center gap-3 shrink-0 group">
-            <div className="relative flex items-center transition-all">
+          <a 
+            href="#inicio" 
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavClick('#inicio');
+            }}
+            className="flex items-center gap-2 sm:gap-3 shrink min-w-0 group cursor-pointer"
+          >
+            <div className="relative flex items-center transition-all min-w-0">
               <img 
                 src="./images/logo2.png" 
                 alt="Gráfica Vinigor - Imprimindo boas ideias" 
-                className="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]"
+                className="h-8 sm:h-10 md:h-12 max-w-[140px] xs:max-w-[170px] sm:max-w-none w-auto object-contain transition-transform group-hover:scale-[1.02]"
                 onError={(e) => {
                   // fallback to text if image fails
                   const target = e.currentTarget;
@@ -105,11 +110,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               />
               {/* Fallback branded text */}
               <div style={{ display: 'none' }} className="flex-col">
-                <span className="font-extrabold text-xl sm:text-2xl text-slate-900 tracking-tight flex items-center gap-1">
+                <span className="font-extrabold text-base sm:text-2xl text-slate-900 tracking-tight flex items-center gap-1">
                   GRÁFICA <span className="text-emerald-600">VINIGOR</span>
-                  <span className="inline-block w-2.5 h-2.5 rounded-full bg-pink-500"></span>
+                  <span className="inline-block w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-pink-500"></span>
                 </span>
-                <span className="text-[10px] uppercase font-bold tracking-widest text-slate-600">
+                <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-widest text-slate-600">
                   Imprimindo Boas Ideias
                 </span>
               </div>
@@ -130,7 +135,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
           </nav>
 
           {/* Action CTAs */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
             <button
               onClick={() => onOpenQuoteModal ? onOpenQuoteModal() : handleNavClick('#orcamento')}
               className="hidden sm:inline-flex items-center justify-center px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-lg transition-colors cursor-pointer"
@@ -142,20 +147,20 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               href={COMPANY_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-xs sm:text-sm rounded-lg shadow-sm hover:shadow-emerald-600/25 transition-all group cursor-pointer"
+              className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-2 sm:py-2.5 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-xs sm:text-sm rounded-lg shadow-sm hover:shadow-emerald-600/25 transition-all group cursor-pointer"
             >
-              <MessageCircle className="w-4 h-4 text-white stroke-[2.2]" />
+              <MessageCircle className="w-4 h-4 text-white stroke-[2.2] shrink-0" />
               <span className="text-white hidden sm:inline">Chamar no WhatsApp</span>
-              <span className="text-white sm:hidden">WhatsApp</span>
+              <span className="text-white sm:hidden text-xs">WhatsApp</span>
             </a>
 
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="xl:hidden p-2 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-100 focus:outline-hidden"
+              className="xl:hidden p-1.5 sm:p-2 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-100 focus:outline-hidden"
               aria-label="Menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
             </button>
           </div>
         </div>

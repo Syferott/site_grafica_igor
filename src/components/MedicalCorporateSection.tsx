@@ -84,28 +84,28 @@ export const MedicalCorporateSection: React.FC = () => {
             </p>
           </div>
 
-          <div id="papelaria-empresarial" className="flex items-center p-1.5 bg-slate-900 border border-slate-800 rounded-xl shrink-0">
+          <div id="papelaria-empresarial" className="flex items-center p-1 bg-slate-900 border border-slate-800 rounded-xl w-full sm:w-auto">
             <button
               onClick={() => setActiveSegment('medica')}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+              className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                 activeSegment === 'medica'
                   ? 'bg-emerald-500 text-slate-950 shadow-md'
                   : 'text-slate-300 hover:text-white'
               }`}
             >
-              <Stethoscope className="w-4 h-4" />
-              <span>Papelaria Médica</span>
+              <Stethoscope className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+              <span className="truncate">Papelaria Médica</span>
             </button>
             <button
               onClick={() => setActiveSegment('empresarial')}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+              className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                 activeSegment === 'empresarial'
                   ? 'bg-emerald-500 text-slate-950 shadow-md'
                   : 'text-slate-300 hover:text-white'
               }`}
             >
-              <Briefcase className="w-4 h-4" />
-              <span>Papelaria Empresarial</span>
+              <Briefcase className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+              <span className="truncate">Papelaria Empresarial</span>
             </button>
           </div>
         </div>

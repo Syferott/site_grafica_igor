@@ -55,28 +55,28 @@ export const Hero: React.FC<HeroProps> = ({ onExploreServices, onOpenQuote }) =>
             </div>
 
             {/* CTA Buttons in logo green */}
-            <div className="flex flex-wrap items-center gap-3.5 pt-3">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-3.5 pt-3 w-full">
               <a
                 href={COMPANY_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-extrabold text-sm sm:text-base rounded-xl shadow-lg hover:shadow-emerald-600/25 transition-all transform active:scale-95 cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-extrabold text-sm sm:text-base rounded-xl shadow-lg hover:shadow-emerald-600/25 transition-all transform active:scale-95 cursor-pointer text-center"
               >
-                <MessageCircle className="w-5 h-5 text-white stroke-[2.2]" />
+                <MessageCircle className="w-5 h-5 text-white stroke-[2.2] shrink-0" />
                 <span className="text-white">Pedir Orçamento no WhatsApp</span>
               </a>
 
               <button
                 onClick={onOpenQuote}
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm sm:text-base rounded-xl border border-slate-700 hover:border-slate-600 shadow-xs transition-colors cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm sm:text-base rounded-xl border border-slate-700 hover:border-slate-600 shadow-xs transition-colors cursor-pointer text-center"
               >
                 <span>Simulador de Pedido</span>
-                <ArrowRight className="w-4 h-4 text-slate-400" />
+                <ArrowRight className="w-4 h-4 text-slate-400 shrink-0" />
               </button>
 
               <button
                 onClick={onExploreServices}
-                className="inline-flex items-center gap-1.5 px-4 py-3 text-slate-400 hover:text-emerald-400 text-sm font-semibold transition-colors cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2.5 sm:py-3 text-slate-400 hover:text-emerald-400 text-sm font-semibold transition-colors cursor-pointer text-center"
               >
                 Ver todos os serviços ↓
               </button>

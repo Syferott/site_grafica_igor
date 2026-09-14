@@ -1,8 +1,13 @@
 import React from 'react';
 import { COMPANY_INFO } from '../data/siteData';
 import { Phone, Mail, MapPin, Clock, MessageCircle, Heart } from 'lucide-react';
+import { scrollToSection } from '../utils/scroll';
 
 export const Footer: React.FC = () => {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
+    e.preventDefault();
+    scrollToSection(target, 75, 750);
+  };
   return (
     <footer className="bg-[#090d14] text-slate-400 text-xs pt-16 pb-12 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,12 +43,12 @@ export const Footer: React.FC = () => {
               Nossos Serviços
             </h4>
             <ul className="space-y-2 text-slate-400 text-xs">
-              <li><a href="#servicos" className="hover:text-emerald-400 transition-colors">Impressão Digital & Plottagem</a></li>
-              <li><a href="#servicos" className="hover:text-emerald-400 transition-colors">Gráfica Offset de Grandes Tiragens</a></li>
-              <li><a href="#servicos" className="hover:text-emerald-400 transition-colors">Comunicação Visual, Banners & Faixas</a></li>
-              <li><a href="#papelaria-medica" className="hover:text-emerald-400 transition-colors">Receituários Médicos e Pastas</a></li>
-              <li><a href="#papelaria-empresarial" className="hover:text-emerald-400 transition-colors">Cartões com Verniz Localizado UV</a></li>
-              <li><a href="#servicos" className="hover:text-emerald-400 transition-colors">Cardápios PVC e Plastificados</a></li>
+              <li><a href="#servicos" onClick={(e) => handleScroll(e, '#servicos')} className="hover:text-emerald-400 transition-colors">Impressão Digital & Plottagem</a></li>
+              <li><a href="#servicos" onClick={(e) => handleScroll(e, '#servicos')} className="hover:text-emerald-400 transition-colors">Gráfica Offset de Grandes Tiragens</a></li>
+              <li><a href="#servicos" onClick={(e) => handleScroll(e, '#servicos')} className="hover:text-emerald-400 transition-colors">Comunicação Visual, Banners & Faixas</a></li>
+              <li><a href="#papelaria-medica" onClick={(e) => handleScroll(e, '#papelaria-medica')} className="hover:text-emerald-400 transition-colors">Receituários Médicos e Pastas</a></li>
+              <li><a href="#papelaria-empresarial" onClick={(e) => handleScroll(e, '#papelaria-empresarial')} className="hover:text-emerald-400 transition-colors">Cartões com Verniz Localizado UV</a></li>
+              <li><a href="#servicos" onClick={(e) => handleScroll(e, '#servicos')} className="hover:text-emerald-400 transition-colors">Cardápios PVC e Plastificados</a></li>
             </ul>
           </div>
 
@@ -124,7 +129,7 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <a href="#inicio" className="hover:text-emerald-400 transition-colors">Voltar ao topo ↑</a>
+            <a href="#inicio" onClick={(e) => handleScroll(e, '#inicio')} className="hover:text-emerald-400 transition-colors cursor-pointer">Voltar ao topo ↑</a>
             <span>•</span>
             <a href={COMPANY_INFO.social.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">Instagram</a>
             <span>•</span>

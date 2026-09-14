@@ -17,6 +17,7 @@ import { FaqSection } from './components/FaqSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
+import { scrollToSection } from './utils/scroll';
 
 export default function App() {
   const [quoteCategory, setQuoteCategory] = useState<string>('offset');
@@ -25,28 +26,19 @@ export default function App() {
   const handleSelectProductForQuote = (productName: string, category: string) => {
     setQuoteCategory(category);
     setQuoteProduct(productName);
-    const element = document.querySelector('#orcamento');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    scrollToSection('#orcamento', 75, 750);
   };
 
   const handleOpenQuote = () => {
-    const element = document.querySelector('#orcamento');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    scrollToSection('#orcamento', 75, 750);
   };
 
   const handleExploreServices = () => {
-    const element = document.querySelector('#servicos');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    scrollToSection('#servicos', 75, 700);
   };
 
   return (
-    <div className="min-h-screen bg-[#0f141c] text-slate-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-slate-950">
+    <div className="min-h-screen bg-[#0f141c] text-slate-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-slate-950 overflow-x-hidden w-full max-w-full">
       {/* Navigation */}
       <Header onOpenQuoteModal={handleOpenQuote} />
 

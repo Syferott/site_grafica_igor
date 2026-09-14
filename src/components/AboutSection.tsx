@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Award, Lightbulb, Users, Cpu, Smile, DollarSign, ArrowRight } from 'lucide-react';
+import { Target, Award, ArrowRight } from 'lucide-react';
 import { COMPANY_INFO } from '../data/siteData';
 
 interface AboutSectionProps {
@@ -7,39 +7,6 @@ interface AboutSectionProps {
 }
 
 export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenQuote }) => {
-  const reasons = [
-    {
-      title: 'Experiência Comprovada',
-      desc: 'Mais de 2 décadas produzindo com excelência técnica para o mercado carioca e fluminense.',
-      icon: <Award className="w-5 h-5 text-emerald-400" />
-    },
-    {
-      title: 'Equipe Especializada',
-      desc: 'Profissionais dedicados de pré-impressão, operadores gráficos e designers prontos para orientar.',
-      icon: <Users className="w-5 h-5 text-emerald-400" />
-    },
-    {
-      title: 'Tecnologia Avançada',
-      desc: 'Maquinário moderno digital e offset com calibração precisa e alta produtividade.',
-      icon: <Cpu className="w-5 h-5 text-emerald-400" />
-    },
-    {
-      title: 'Foco no Cliente',
-      desc: 'Atendimento humanizado, orientações sobre acabamento de papel e respeito aos seus prazos.',
-      icon: <Smile className="w-5 h-5 text-emerald-400" />
-    },
-    {
-      title: 'Preços Competitivos',
-      desc: 'Custo direto de gráfica com o melhor custo-benefício para pequenas e grandes tiragens.',
-      icon: <DollarSign className="w-5 h-5 text-emerald-400" />
-    },
-    {
-      title: 'Criatividade & Inovação',
-      desc: 'Soluções em corte e vinco especial, vernizes nobres e comunicação visual que destacam sua marca.',
-      icon: <Lightbulb className="w-5 h-5 text-emerald-400" />
-    }
-  ];
-
   return (
     <section id="quem-somos" className="py-16 sm:py-24 bg-[#0f141c] border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -139,37 +106,6 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenQuote }) => {
             </div>
           </div>
 
-        </div>
-
-        {/* Why Choose Us Grid */}
-        <div className="mt-20">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-              Por que escolher a Gráfica Vinigor?
-            </h3>
-            <p className="mt-2 text-sm sm:text-base text-slate-300">
-              Pilares que mantêm nossos clientes satisfeitos e fiéis por anos consecutivos.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {reasons.map((r, i) => (
-              <div
-                key={i}
-                className="bg-slate-900/90 p-6 rounded-2xl border border-slate-800 shadow-2xs hover:shadow-lg hover:border-slate-700 transition-all space-y-3"
-              >
-                <div className="p-3 w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center">
-                  {r.icon}
-                </div>
-                <h4 className="text-base font-bold text-white">
-                  {r.title}
-                </h4>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  {r.desc}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
 
       </div>
