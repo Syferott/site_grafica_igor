@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
             </div>
             
             <p className="text-slate-400 text-xs leading-relaxed max-w-sm">
-              <strong className="text-white">Imprimindo boas ideias</strong> desde a década de 90. Soluções de alta precisão em impressão digital rápida, offset e comunicação visual para todo o Rio de Janeiro.
+              <strong className="text-white">Imprimindo boas ideias</strong>. Soluções de alta precisão em impressão digital rápida, offset e comunicação visual para todo o Rio de Janeiro.
             </p>
           </div>
 
@@ -113,14 +113,14 @@ export const Footer: React.FC = () => {
 
         </div>
 
-        {/* Bottom Bar: Official legal details from old site */}
+        {/* Bottom Bar: Official legal details */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400 text-[11px]">
           <div>
             <p>
-              Gráfica Vinigor • CNPJ {COMPANY_INFO.cnpj} • Todos os direitos reservados.
+              Gráfica Vinigor
             </p>
             <p className="mt-0.5 text-slate-400">
-              IR Design – CNPJ 19.642.269/0001-08 © 2024–2026. Desenvolvido por Igor Resende.
+              © 2024–2026. Desenvolvido por Igor Resende.
             </p>
           </div>
 

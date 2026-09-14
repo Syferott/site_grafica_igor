@@ -21,9 +21,6 @@ export const FaqSection: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Perguntas Frequentes
           </h2>
-          <p className="mt-2 text-sm sm:text-base text-slate-300">
-            Respostas claras sobre envio de arquivos, formatos, prazos de entrega e pagamento.
-          </p>
         </div>
 
         <div className="space-y-3">
