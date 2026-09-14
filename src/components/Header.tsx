@@ -29,7 +29,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
     <>
       {/* Top bar info - hidden on mobile, scrolls with page on desktop */}
       <div className="hidden md:block bg-slate-100 text-slate-600 text-xs py-2 px-4 border-b border-slate-200/80">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+        <div className="max-w-[1440px] mx-auto flex flex-wrap items-center justify-between gap-3">
           <div className="flex flex-wrap items-center gap-4 sm:gap-6">
             <span className="flex items-center gap-1.5 text-slate-700 font-medium">
               <Clock className="w-3.5 h-3.5 text-emerald-600" />
@@ -83,50 +83,52 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
 
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 text-slate-900 shadow-sm w-full">
         {/* Main Navbar */}
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20 gap-3 sm:gap-4">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex items-center justify-between h-16 sm:h-20 gap-2 sm:gap-4">
           {/* Logo with high-contrast badge */}
-          <a 
-            href="#inicio" 
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavClick('#inicio');
-            }}
-            className="flex items-center shrink-0 group cursor-pointer"
-          >
-            <div className="relative flex items-center shrink-0">
-              <img 
-                src="./images/logo2.png" 
-                alt="Gráfica Vinigor - Imprimindo boas ideias" 
-                className="h-8 sm:h-9 md:h-11 w-auto object-contain shrink-0 transition-transform group-hover:scale-[1.02]"
-                onError={(e) => {
-                  // fallback to text if image fails
-                  const target = e.currentTarget;
-                  target.style.display = 'none';
-                  const fallback = target.nextElementSibling as HTMLElement;
-                  if (fallback) fallback.style.display = 'flex';
-                }}
-              />
-              {/* Fallback branded text */}
-              <div style={{ display: 'none' }} className="flex-col shrink-0">
-                <span className="font-extrabold text-base sm:text-2xl text-slate-900 tracking-tight flex items-center gap-1">
-                  GRÁFICA <span className="text-emerald-600">VINIGOR</span>
-                  <span className="inline-block w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-pink-500"></span>
-                </span>
-                <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-widest text-slate-600">
-                  Imprimindo Boas Ideias
-                </span>
+          <div className="flex items-center shrink-0 justify-start xl:min-w-[180px] 2xl:min-w-[220px]">
+            <a 
+              href="#inicio" 
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick('#inicio');
+              }}
+              className="flex items-center group cursor-pointer"
+            >
+              <div className="relative flex items-center shrink-0">
+                <img 
+                  src="./images/logo2.png" 
+                  alt="Gráfica Vinigor - Imprimindo boas ideias" 
+                  className="h-8 sm:h-9 md:h-11 w-auto object-contain shrink-0 transition-transform group-hover:scale-[1.02]"
+                  onError={(e) => {
+                    // fallback to text if image fails
+                    const target = e.currentTarget;
+                    target.style.display = 'none';
+                    const fallback = target.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
+                />
+                {/* Fallback branded text */}
+                <div style={{ display: 'none' }} className="flex-col shrink-0">
+                  <span className="font-extrabold text-base sm:text-2xl text-slate-900 tracking-tight flex items-center gap-1">
+                    GRÁFICA <span className="text-emerald-600">VINIGOR</span>
+                    <span className="inline-block w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-pink-500"></span>
+                  </span>
+                  <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-widest text-slate-600">
+                    Imprimindo Boas Ideias
+                  </span>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-0.5 2xl:gap-1 text-xs 2xl:text-sm font-semibold text-slate-700 shrink-0">
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden xl:flex items-center justify-center flex-1 mx-2 2xl:mx-4 gap-0.5 2xl:gap-1 text-xs 2xl:text-sm font-semibold text-slate-700">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className="px-2 2xl:px-3 py-1.5 2xl:py-2 rounded-lg hover:text-emerald-600 hover:bg-slate-100 transition-colors cursor-pointer text-left whitespace-nowrap"
+                className="px-2 2xl:px-3 py-1.5 rounded-lg hover:text-emerald-600 hover:bg-slate-100 transition-colors cursor-pointer text-center whitespace-nowrap"
               >
                 {link.label}
               </button>
@@ -134,10 +136,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
           </nav>
 
           {/* Action CTAs */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <div className="flex items-center justify-end gap-2 sm:gap-2.5 shrink-0 xl:min-w-[180px] 2xl:min-w-[220px]">
             <button
               onClick={() => onOpenQuoteModal ? onOpenQuoteModal() : handleNavClick('#orcamento')}
-              className="hidden sm:inline-flex items-center justify-center px-3.5 2xl:px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-lg transition-colors cursor-pointer whitespace-nowrap"
+              className="hidden sm:inline-flex items-center justify-center px-3 2xl:px-4 py-2 text-xs font-bold uppercase tracking-wider text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-lg transition-colors cursor-pointer whitespace-nowrap"
             >
               Simular Pedido
             </button>
@@ -146,10 +148,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               href={COMPANY_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-xs sm:text-sm rounded-lg shadow-sm hover:shadow-emerald-600/25 transition-all group cursor-pointer whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-2 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-xs 2xl:text-sm rounded-lg shadow-sm hover:shadow-emerald-600/25 transition-all group cursor-pointer whitespace-nowrap"
             >
               <MessageCircle className="w-4 h-4 text-white stroke-[2.2] shrink-0" />
-              <span className="text-white hidden sm:inline">Chamar no WhatsApp</span>
+              <span className="text-white hidden 2xl:inline">Chamar no WhatsApp</span>
+              <span className="text-white hidden sm:inline 2xl:hidden">WhatsApp</span>
               <span className="text-white sm:hidden text-xs">WhatsApp</span>
             </a>
 
