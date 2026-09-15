@@ -120,7 +120,7 @@ export const Footer: React.FC = () => {
               Gráfica Vinigor
             </p>
             <p className="mt-0.5 text-slate-400">
-              © 2024–2026. Desenvolvido por Igor Resende.
+              © 2026 - Desenvolvido por Igor Resende.
             </p>
           </div>
 

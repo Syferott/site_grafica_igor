@@ -80,7 +80,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenQuote }) => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent flex items-end p-4">
                   <div className="text-white">
-                    <p className="text-xs font-semibold text-emerald-400 uppercase tracking-wider">Parque Gráfico</p>
+                    <p className="text-xs font-semibold text-emerald-400 uppercase tracking-wider">Nosso endereço:</p>
                     <p className="text-sm font-bold">Estrada José Rucas, 201 - Penha / RJ</p>
                   </div>
                 </div>

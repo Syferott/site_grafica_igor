@@ -374,7 +374,7 @@ export const FAQS: FaqItem[] = [
   },
   {
     question: 'Quais formatos de arquivo vocês aceitam para impressão?',
-    answer: 'Recomendamos o envio em PDF/X-1a em padrão de cores CMYK com textos convertidos em curvas e imagens em resolução mínima de 300 DPI. Também recebemos arquivos em Corel Draw, Adobe Illustrator, Photoshop e TIFF.',
+    answer: 'Recomendamos o envio em PDF/X-1a em padrão de cores CMYK com textos convertidos em curvas e imagens em resolução mínima de 300 DPI. Também recebemos arquivos em Corel Draw e no formato PDF',
     category: 'arquivos'
   },
   {
@@ -384,7 +384,7 @@ export const FAQS: FaqItem[] = [
   },
   {
     question: 'Qual é a diferença entre Impressão Digital e Offset?',
-    answer: 'A Impressão Digital é recomendada para pequenas e médias quantidades com urgência ou dados variáveis, sem custo fixo de chapas. Já a Gráfica Offset é a opção mais econômica e precisa para médias e grandes tiragens (como 1.000, 5.000 ou 50.000 folhetos, blocos ou caixas).',
+    answer: 'A Impressão Digital é recomendada para pequenas e médias quantidades com urgência ou dados variáveis, mas com custo fixo por folha. Já a impressão Offset é a opção mais econômica para quem precisa para médias de maiores tiragens (ex: 1.000, 5.000 ou 50.000 folhetos).',
     category: 'producao'
   },
   {

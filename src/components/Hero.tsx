@@ -1,6 +1,9 @@
 import React from 'react';
 import { MessageCircle, ArrowRight, ShieldCheck, CheckCircle2, Award, Clock } from 'lucide-react';
 import { COMPANY_INFO } from '../data/siteData';
+import cartaoVernizRealImg from '../assets/images/cartao_verniz_real_1789429910140.jpg';
+import receitaBrancaImg from '../assets/images/receita_branca_1789429567242.jpg';
+import windBannerFacaImg from '../assets/images/wind_banner_faca_1789430122076.jpg';
 
 interface HeroProps {
   onExploreServices: () => void;
@@ -38,7 +41,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreServices, onOpenQuote }) =>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-sm font-medium text-slate-200">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>Orçamento rápido em minutos via WhatsApp</span>
+                <span>Soluções em impressão Off-set e Digital</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
@@ -82,24 +85,6 @@ export const Hero: React.FC<HeroProps> = ({ onExploreServices, onOpenQuote }) =>
               </button>
             </div>
 
-            {/* Verification / Security note */}
-            <div className="pt-2 flex flex-wrap items-center gap-4 text-xs text-slate-400 border-t border-slate-800">
-              <span className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                <span>Atendimento Direto & Seguro</span>
-              </span>
-              <span>•</span>
-              <span className="flex items-center gap-1.5">
-                <Award className="w-4 h-4 text-emerald-400" />
-                <span>Fidelidade de Cores CMYK</span>
-              </span>
-              <span>•</span>
-              <span className="flex items-center gap-1.5">
-                <Clock className="w-4 h-4 text-amber-400" />
-                <span>Prazos Cumpridos à Risca</span>
-              </span>
-            </div>
-
           </div>
 
           {/* Right Column: Visual Composite Showcase */}
@@ -110,8 +95,8 @@ export const Hero: React.FC<HeroProps> = ({ onExploreServices, onOpenQuote }) =>
                 {/* Main Showcase Image */}
                 <div className="relative rounded-xl overflow-hidden aspect-4/3 bg-slate-800 group">
                   <img
-                    src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=900&q=80"
-                    alt="Gráfica Vinigor - Materiais impressos de alta definição"
+                    src={cartaoVernizRealImg}
+                    alt="Cartão de Visita com Verniz Localizado - Gráfica Vinigor"
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
@@ -132,7 +117,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreServices, onOpenQuote }) =>
                 <div className="grid grid-cols-2 gap-3">
                   <div className="rounded-lg overflow-hidden bg-slate-800/80 p-2.5 border border-slate-700/80 flex items-center gap-2.5">
                     <img
-                      src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=160&q=80"
+                      src={receitaBrancaImg}
                       alt="Papelaria Médica"
                       className="w-12 h-12 rounded-md object-cover shrink-0"
                     />
@@ -144,7 +129,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreServices, onOpenQuote }) =>
 
                   <div className="rounded-lg overflow-hidden bg-slate-800/80 p-2.5 border border-slate-700/80 flex items-center gap-2.5">
                     <img
-                      src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=160&q=80"
+                      src={windBannerFacaImg}
                       alt="Comunicação Visual"
                       className="w-12 h-12 rounded-md object-cover shrink-0"
                     />
@@ -159,23 +144,6 @@ export const Hero: React.FC<HeroProps> = ({ onExploreServices, onOpenQuote }) =>
             </div>
           </div>
 
-        </div>
-
-        {/* Bottom Metrics Ribbon */}
-        <div className="mt-14 pt-8 border-t border-slate-800 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {COMPANY_INFO.stats.map((stat, idx) => (
-            <div key={idx} className="bg-slate-900/80 p-4 rounded-xl border border-slate-800 shadow-xs">
-              <div className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-                {stat.value}
-              </div>
-              <div className="text-xs sm:text-sm font-bold text-emerald-400 mt-0.5">
-                {stat.label}
-              </div>
-              <div className="text-xs text-slate-400 mt-0.5">
-                {stat.subtext}
-              </div>
-            </div>
-          ))}
         </div>
 
       </div>
