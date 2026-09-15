@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Stethoscope, Briefcase, CheckCircle2, MessageCircle, FileText, Folder, CreditCard } from 'lucide-react';
+import { Stethoscope, Briefcase, FileText, Folder, CreditCard } from 'lucide-react';
 import { COMPANY_INFO } from '../data/siteData';
 
 export const MedicalCorporateSection: React.FC = () => {
@@ -7,7 +7,7 @@ export const MedicalCorporateSection: React.FC = () => {
 
   const medicalHighlights = [
     {
-      title: 'Receituários Simples e Controlados (Portaria 344)',
+      title: 'Receituários Simples e Controlados',
       desc: 'Padronizados conforme exigências do CFM e Anvisa. Numeração sequencial, canhoto picotado e vias autocopiativas nítidas.',
       icon: <FileText className="w-5 h-5 text-emerald-400" />,
       tag: 'Conforme CFM/Anvisa'
@@ -19,8 +19,8 @@ export const MedicalCorporateSection: React.FC = () => {
       tag: 'Alta Resistência'
     },
     {
-      title: 'Atestados, Prontuários e Declarações Timbradas',
-      desc: 'Papel Sulfite 75g, 90g ou Vergê especial com a logomarca e dados do médico com acabamento impecável.',
+      title: 'Atestados, Prontuários e Timbrados',
+      desc: 'Papel Sulfite 75g ou 90g com o logotipo e dados do médico.',
       icon: <Stethoscope className="w-5 h-5 text-emerald-400" />,
       tag: 'Personalizado'
     },
@@ -148,29 +148,6 @@ export const MedicalCorporateSection: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Banner with Guarantee */}
-        <div className="mt-12 p-6 rounded-2xl bg-gradient-to-r from-slate-900 to-[#141a24] border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="space-y-1 text-center sm:text-left">
-            <h4 className="text-lg font-bold text-white flex items-center gap-2 justify-center sm:justify-start">
-              <CheckCircle2 className="w-5 h-5 text-emerald-400" />
-              Precisa de padronização para mais de um profissional ou filial?
-            </h4>
-            <p className="text-xs sm:text-sm text-slate-400">
-              Mantemos seu arquivo arquivado em segurança com prova de cor padronizada para reordens rápidas em segundos.
-            </p>
-          </div>
-
-          <a
-            href={`https://wa.me/${COMPANY_INFO.phoneClean}?text=${encodeURIComponent(`Olá! Gostaria de falar sobre papelaria corporativa/médica para minha equipe/empresa.`)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm rounded-xl shrink-0 transition-colors shadow-sm cursor-pointer"
-          >
-            <MessageCircle className="w-4 h-4 text-white stroke-[2.2]" />
-            <span className="text-white">Falar com Especialista</span>
-          </a>
         </div>
 
       </div>

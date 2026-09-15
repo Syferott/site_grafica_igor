@@ -30,7 +30,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreServices, onOpenQuote }) =>
                 Sua parceira completa em <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-emerald-300 to-teal-200">Impressão Digital</span>, Offset e Comunicação Visual.
               </h1>
               <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl pt-2">
-                Qualidade de ponta para empresas, profissionais de saúde e comércios no Rio de Janeiro. De pequenas tiragens urgentes a grandes volumes industriais com registro de cor impecável.
+                Qualidade de ponta para empresas, profissionais de saúde e comércios no Rio de Janeiro. De pequenas tiragens a grandes volumes.
               </p>
             </div>
 
@@ -70,7 +70,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreServices, onOpenQuote }) =>
                 onClick={onOpenQuote}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm sm:text-base rounded-xl border border-slate-700 hover:border-slate-600 shadow-xs transition-colors cursor-pointer text-center"
               >
-                <span>Simulador de Pedido</span>
+                <span>Simule agora pelo site</span>
                 <ArrowRight className="w-4 h-4 text-slate-400 shrink-0" />
               </button>
 
@@ -153,27 +153,6 @@ export const Hero: React.FC<HeroProps> = ({ onExploreServices, onOpenQuote }) =>
                       <p className="text-[11px] text-slate-400">Banners e Sinalização</p>
                     </div>
                   </div>
-                </div>
-
-                {/* Floating Experience Badge */}
-                <div className="p-3 bg-[#0b0e14] border border-slate-800 text-white rounded-xl flex items-center justify-between gap-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-black text-lg">
-                      20+
-                    </div>
-                    <div>
-                      <p className="text-xs font-bold leading-tight">Anos de Experiência</p>
-                      <p className="text-[11px] text-slate-400 leading-tight">Compromisso com cada detalhe</p>
-                    </div>
-                  </div>
-                  <a
-                    href={COMPANY_INFO.whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold rounded-md shrink-0 transition-colors"
-                  >
-                    Falar agora
-                  </a>
                 </div>
 
               </div>

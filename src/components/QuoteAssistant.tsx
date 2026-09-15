@@ -75,13 +75,13 @@ export const QuoteAssistant: React.FC<QuoteAssistantProps> = ({
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2">
             <Calculator className="w-3.5 h-3.5 text-emerald-400" />
-            Simulador de Pedido & Orçamento Rápido
+            Faça seu Orçamento Rápido
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Monte seu orçamento sem burocracia
           </h2>
           <p className="mt-2 text-sm sm:text-base text-slate-300">
-            Selecione as especificações do seu impresso. Enviamos a proposta calculada diretamente para seu WhatsApp em minutos!
+            Selecione as especificações do seu impresso. Enviaremos a proposta diretamente no seu WhatsApp
           </p>
         </div>
 

@@ -40,7 +40,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenQuote }) => {
                 <span>Nossa Missão</span>
               </div>
               <p className="text-sm text-slate-300 font-medium leading-relaxed">
-                Fortalecer marcas e empresas por meio de soluções gráficas impactantes, valorizando suas identidades visuais e fazendo com que sejam lembradas pelo público com orgulho e autoridade.
+                Fortalecer marcas e empresas por meio de soluções gráficas impactantes, valorizando suas identidades visuais e fazendo com que sejam lembradas pelo público com autoridade.
               </p>
             </div>
 
@@ -70,7 +70,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenQuote }) => {
 
           {/* Right: Graphic Identity & Visual Proof */}
           <div className="lg:col-span-5">
-            <div className="relative rounded-3xl p-4 bg-slate-900/90 border border-slate-800 shadow-xl space-y-4">
+            <div className="relative rounded-3xl p-4 bg-slate-900/90 border border-slate-800 shadow-xl">
               {/* Graphic Print Press image */}
               <div className="rounded-2xl overflow-hidden aspect-4/3 bg-slate-800 relative">
                 <img
@@ -83,24 +83,6 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenQuote }) => {
                     <p className="text-xs font-semibold text-emerald-400 uppercase tracking-wider">Parque Gráfico</p>
                     <p className="text-sm font-bold">Estrada José Rucas, 201 - Penha / RJ</p>
                   </div>
-                </div>
-              </div>
-
-              {/* Logo highlight card */}
-              <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 flex items-center justify-between gap-4">
-                <div className="bg-white/95 px-3 py-1.5 rounded-lg shadow-xs">
-                  <img
-                    src="./images/logo_vinigor.png"
-                    alt="Gráfica Vinigor"
-                    className="h-9 w-auto object-contain"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                    }}
-                  />
-                </div>
-                <div className="text-right">
-                  <span className="text-[11px] font-bold text-emerald-400 uppercase">Tradição</span>
-                  <p className="text-xs font-bold text-white">Desde a década de 1990</p>
                 </div>
               </div>
             </div>

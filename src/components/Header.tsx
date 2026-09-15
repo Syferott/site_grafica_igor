@@ -12,11 +12,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
 
   const navLinks = [
     { label: 'Início', href: '#inicio' },
-    { label: 'Serviços & Produtos', href: '#servicos' },
+    { label: 'Serviços', href: '#servicos' },
     { label: 'Papelaria Médica', href: '#papelaria-medica' },
     { label: 'Papelaria Empresarial', href: '#papelaria-empresarial' },
     { label: 'Quem Somos', href: '#quem-somos' },
-    { label: 'Depoimentos', href: '#depoimentos' },
     { label: 'Dúvidas', href: '#duvidas' },
   ];
 
@@ -189,7 +188,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               }}
               className="w-full text-center py-2.5 px-4 bg-slate-100 text-slate-800 font-bold text-sm rounded-lg border border-slate-300 hover:bg-slate-200"
             >
-              Simulador de Orçamento
+              Faça seu Orçamento
             </button>
             <a
               href={COMPANY_INFO.whatsappUrl}

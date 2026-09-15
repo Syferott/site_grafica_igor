@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle, MessageCircle } from 'lucide-react';
-import { FAQS, COMPANY_INFO } from '../data/siteData';
+import { ChevronDown, HelpCircle } from 'lucide-react';
+import { FAQS } from '../data/siteData';
 
 export const FaqSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -52,29 +52,6 @@ export const FaqSection: React.FC = () => {
             );
           })}
         </div>
-
-        {/* Still has doubts CTA */}
-        <div className="mt-10 p-6 rounded-2xl bg-slate-900/90 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-          <div>
-            <p className="font-bold text-white text-sm">
-              Tem alguma dúvida específica sobre o seu projeto?
-            </p>
-            <p className="text-xs text-slate-400 mt-0.5">
-              Nossos consultores técnicos atendem de segunda à sexta das 9h às 18h e sábados das 9h às 12h.
-            </p>
-          </div>
-
-          <a
-            href={COMPANY_INFO.whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl transition-colors shrink-0 shadow-md cursor-pointer"
-          >
-            <MessageCircle className="w-4 h-4 text-white stroke-[2.2]" />
-            <span className="text-white">Falar no WhatsApp</span>
-          </a>
-        </div>
-
       </div>
     </section>
   );

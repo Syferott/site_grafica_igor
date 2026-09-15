@@ -11,7 +11,6 @@ import { MedicalCorporateSection } from './components/MedicalCorporateSection';
 import { QuoteAssistant } from './components/QuoteAssistant';
 import { PortfolioShowcase } from './components/PortfolioShowcase';
 import { AboutSection } from './components/AboutSection';
-import { Testimonials } from './components/Testimonials';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
@@ -67,9 +66,6 @@ export default function App() {
 
         {/* About Gráfica Vinigor (Company Story since 90s, Values, Mission) */}
         <AboutSection onOpenQuote={handleOpenQuote} />
-
-        {/* Customer Testimonials for High Credibility */}
-        <Testimonials />
 
         {/* Technical FAQ */}
         <FaqSection />

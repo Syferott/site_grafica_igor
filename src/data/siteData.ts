@@ -1,4 +1,12 @@
 import { ServiceCategory, ServiceItem, Testimonial, PortfolioItem, FaqItem } from '../types';
+import cartaoVernizUvImg from '../assets/images/cartao_verniz_real_1789429910140.jpg';
+import cartaoClassicoImg from '../assets/images/cartao_classico_1789429553377.jpg';
+import receitaBrancaImg from '../assets/images/receita_branca_1789429567242.jpg';
+import pastaGraficaImg from '../assets/images/pasta_grafica_1789429578692.jpg';
+import windBannerFacaImg from '../assets/images/wind_banner_faca_1789430122076.jpg';
+import flyersPanfletosImg from '../assets/images/flyers_panfletos_1789430133747.jpg';
+import rotulosAdesivosImg from '../assets/images/rotulos_adesivos_1789430146282.jpg';
+import cardapioPlastificadoImg from '../assets/images/cardapio_plastificado_1789430159749.jpg';
 
 export const COMPANY_INFO = {
   name: 'Gráfica Vinigor',
@@ -159,11 +167,11 @@ export const HIGHLIGHTED_PRODUCTS: ServiceItem[] = [
     name: 'Cartões de Visita com Verniz Localizado',
     category: 'offset',
     description: 'Papel Couché 300g com laminação fosca (BOPP) e aplicação de Verniz UV localizado na logomarca ou elementos de destaque.',
-    highlights: ['Couché 300g premium', 'Laminação fosca aveludada', 'Verniz UV localizado frente ou frente/verso'],
+    highlights: ['Couché 300g premium', 'Laminação fosca', 'Verniz UV localizado frente ou frente/verso'],
     popular: true,
     minQuantity: '500 unidades',
     basePrice: 'A partir de R$ 225,00',
-    image: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=800&q=80'
+    image: cartaoVernizUvImg
   },
   {
     id: 'cartoes-tradicionais',
@@ -174,40 +182,40 @@ export const HIGHLIGHTED_PRODUCTS: ServiceItem[] = [
     popular: true,
     minQuantity: '1.000 unidades',
     basePrice: 'A partir de R$ 98,00',
-    image: 'https://images.unsplash.com/photo-1593062096033-9a26b09da705?auto=format&fit=crop&w=800&q=80'
+    image: cartaoClassicoImg
   },
   {
     id: 'receituarios-medicos',
     name: 'Receituários Médicos e Odontológicos',
     category: 'papelaria-medica',
     description: 'Blocos de receituário simples ou autocopiativo com colagem de precisão, picote opcional e numeração sequencial.',
-    highlights: ['Papel Sulfite 75g ou 90g', 'Opção 2 vias autocopiativo', 'Blocos de 50 ou 100 folhas'],
+    highlights: ['Papel Sulfite 75g ou 90g', 'Blocos de 50 ou 100 folhas'],
     popular: true,
     minQuantity: '5 blocos',
     basePrice: 'Sob consulta rápida',
-    image: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80'
+    image: receitaBrancaImg
   },
   {
     id: 'pastas-corporativas',
     name: 'Pastas Personalizadas com Bolsa ou Orelha',
     category: 'papelaria-empresarial',
     description: 'Perfeitas para apresentação de propostas comerciais, contratos e prontuários com encaixe para cartão de visita.',
-    highlights: ['Papel Supremo ou Couché 300g', 'Bolsa colada ou orelha montada', 'Laminação fosca ou brilho'],
+    highlights: ['Papel Supremo ou Couché 300g', 'Com orelha ou bolsa', 'Laminação fosca ou brilho'],
     popular: true,
     minQuantity: '100 unidades',
     basePrice: 'Sob consulta rápida',
-    image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80'
+    image: pastaGraficaImg
   },
   {
     id: 'wind-banners',
-    name: 'Wind Banners e Bandeiras Promocionais',
+    name: 'Wind Banners Modelo Faca e Promocionais',
     category: 'comunicacao-visual',
     description: 'Estrutura completa com tecido especial sublimado, haste de fibra flexível e base para fixação em chão ou grama.',
     highlights: ['Tecido resistente ao sol e vento', 'Haste de fibra de alta durabilidade', 'Base plástica preenchível'],
     popular: true,
     minQuantity: '1 unidade',
     basePrice: 'Sob consulta rápida',
-    image: 'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=800&q=80'
+    image: windBannerFacaImg
   },
   {
     id: 'banners-lonas',
@@ -222,14 +230,14 @@ export const HIGHLIGHTED_PRODUCTS: ServiceItem[] = [
   },
   {
     id: 'cardapios-pvc',
-    name: 'Cardápios Laváveis em PVC e Plastificados',
+    name: 'Cardápios Plastificados ou em PVC',
     category: 'digital',
     description: 'Ideais para restaurantes, bares e cafeterias. Totalmente impermeáveis e resistentes a gordura e limpeza diária.',
     highlights: ['Impermeável e lavável', 'Acabamento grampeado ou wire-o', 'Cantos arredondados'],
     popular: false,
     minQuantity: '10 unidades',
     basePrice: 'Sob consulta rápida',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80'
+    image: cardapioPlastificadoImg
   },
   {
     id: 'panfletos-flyers',
@@ -240,7 +248,7 @@ export const HIGHLIGHTED_PRODUCTS: ServiceItem[] = [
     popular: true,
     minQuantity: '2.500 unidades',
     basePrice: 'Sob consulta rápida',
-    image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80'
+    image: flyersPanfletosImg
   }
 ];
 
@@ -250,7 +258,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Kit de Identidade Corporativa e Papelaria',
     category: 'Papelaria Empresarial',
     description: 'Pastas com bolsa, papel timbrado e cartões de visita com verniz localizado para escritório de advocacia.',
-    image: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=900&q=80',
+    image: pastaGraficaImg,
     tags: ['Couché 300g', 'Verniz Localizado', 'BOPP Fosco']
   },
   {
@@ -258,40 +266,40 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Receituários e Pastas para Clínica Médica',
     category: 'Papelaria Médica',
     description: 'Blocos de receituário controlado em 2 vias autocopiativo e pastas rígidas para entrega de exames de imagem.',
-    image: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=900&q=80',
+    image: receitaBrancaImg,
     tags: ['Autocopiativo', 'Papel Sulfite 90g', 'Penha RJ']
   },
   {
     id: 'p3',
-    title: 'Wind Banners Promocionais para Inauguração',
+    title: 'Wind Banners Modelo Faca para Eventos e Fachadas',
     category: 'Comunicação Visual',
-    description: 'Conjunto de 4 wind banners gota e pena com estampa dupla face para rede de lojas no Rio.',
-    image: 'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=900&q=80',
-    tags: ['Sublimação Digital', 'Fibra de Vidro', 'Resistente']
+    description: 'Conjunto de wind banners modelo faca com estampa de alta definição, dupla face e base reforçada para lojas e eventos.',
+    image: windBannerFacaImg,
+    tags: ['Modelo Faca', 'Sublimação Digital', 'Resistente ao Vento']
   },
   {
     id: 'p4',
-    title: 'Cardápios Luxo em PVC com Laminação',
+    title: 'Cardápios plastificados ou em PVC',
     category: 'Impressão Digital',
-    description: 'Cardápios gastronômicos resistentes a líquidos e rasgos, com encadernação elegante para restaurante na Zona Norte.',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80',
-    tags: ['PVC Rígido', 'Lavável', 'Cores Vivas']
+    description: 'Cardápios gastronômicos resistentes a líquidos e rasgos, com encadernação elegante para restaurante.',
+    image: cardapioPlastificadoImg,
+    tags: ['PVC Rígido / Plastificado', 'Lavável', 'Cores Vivas']
   },
   {
     id: 'p5',
     title: 'Flyers de Alta Circulação para Lançamento',
     category: 'Gráfica Offset',
-    description: 'Tiragem de 50.000 unidades em couché 115g com dobra perfeita e fidelidade cromática conferida em máquina.',
-    image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=900&q=80',
-    tags: ['Offset 4 Cores', 'Couché 115g', 'Grande Tiragem']
+    description: 'Tiragem em couché brilhante com cores vivas, dobra precisa e formato ideal para panfletagem e divulgação de massa.',
+    image: flyersPanfletosImg,
+    tags: ['Panfleto Promocional', 'Couché Brilho', 'Grande Tiragem']
   },
   {
     id: 'p6',
     title: 'Rótulos e Adesivos Vinil com Meio-Corte',
     category: 'Comunicação Visual',
-    description: 'Adesivos circulares recortados eletronicamente para linha de cosméticos e cervejas artesanais.',
-    image: 'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=900&q=80',
-    tags: ['Vinil Brilho', 'Recorte Eletrônico', 'Impermeável']
+    description: 'Adesivos e rótulos circulares recortados com precisão para embalagens, potes, garrafas e cosméticos.',
+    image: rotulosAdesivosImg,
+    tags: ['Vinil Meio-Corte', 'Recorte Eletrônico', 'Impermeável']
   }
 ];
 

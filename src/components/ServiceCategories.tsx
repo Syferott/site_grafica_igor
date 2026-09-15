@@ -152,7 +152,7 @@ export const ServiceCategories: React.FC<ServiceCategoriesProps> = ({ onSelectPr
                           onClick={() => onSelectProductForQuote(res.item, res.category.id)}
                           className="text-xs font-semibold text-slate-400 hover:text-white cursor-pointer"
                         >
-                          Simular
+                          Simule agora
                         </button>
                       )}
                     </div>
@@ -226,7 +226,7 @@ export const ServiceCategories: React.FC<ServiceCategoriesProps> = ({ onSelectPr
                           onClick={() => onSelectProductForQuote(currentCategory.items[0], currentCategory.id)}
                           className="inline-flex items-center justify-center px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold rounded-lg border border-slate-700 transition-colors cursor-pointer"
                         >
-                          Simular neste grupo
+                          Simule agora
                         </button>
                       )}
                     </div>
@@ -244,9 +244,9 @@ export const ServiceCategories: React.FC<ServiceCategoriesProps> = ({ onSelectPr
                 <div className="lg:col-span-7">
                   <div className="bg-slate-950/80 rounded-xl border border-slate-800 p-5 sm:p-6 shadow-xs">
                     <div className="flex items-center justify-between pb-3 border-b border-slate-800 mb-4">
-                      <h4 className="font-bold text-white text-sm sm:text-base">
-                        Materiais produzidos nesta categoria ({currentCategory.items.length})
-                      </h4>
+                      <span className="text-xs font-semibold text-slate-300">
+                        Total de {currentCategory.items.length} itens disponíveis
+                      </span>
                       <span className="text-xs text-slate-400">
                         Clique para orçar
                       </span>
@@ -304,6 +304,7 @@ export const ServiceCategories: React.FC<ServiceCategoriesProps> = ({ onSelectPr
                   <img
                     src={prod.image}
                     alt={prod.name}
+                    referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   {prod.popular && (

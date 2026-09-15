@@ -21,11 +21,8 @@ export const PortfolioShowcase: React.FC = () => {
             Qualidade Comprovada
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Trabalhos Realizados e Acabamentos
+            Confie em quem entende de impressão
           </h2>
-          <p className="mt-3 text-base text-slate-300">
-            Veja amostras reais dos nossos materiais impressos. A precisão de corte, vivacidade das cores e nobreza dos papéis que chegam até as mãos dos seus clientes.
-          </p>
 
           {/* Filter Pills */}
           <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
@@ -56,6 +53,7 @@ export const PortfolioShowcase: React.FC = () => {
                 <img
                   src={item.image}
                   alt={item.title}
+                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
